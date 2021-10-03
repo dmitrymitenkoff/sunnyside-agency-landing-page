@@ -1,0 +1,5 @@
+@use '../abstracts/variables' as *;
+.site-foot {
+  background-color: $footer-bg;
+  height: 35rem;
+}

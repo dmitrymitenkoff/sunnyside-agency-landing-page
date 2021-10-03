@@ -1,0 +1,72 @@
+@use '../abstracts/variables' as *;
+
+.navigation {
+  position: relative;
+  width: fit-content;
+
+  ul {
+    position: absolute;
+    top: 9rem;
+    right: 0;
+    width: 37.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    background: $white;
+
+    &.hide {
+      display: none;
+    }
+
+    &::before {
+      position: absolute;
+      right: 0;
+      top: -2.4rem;
+      content: '';
+      width: 2.4rem;
+      height: 2.4rem;
+      background: $white;
+      clip-path: polygon(100% 1%, 0% 100%, 100% 100%);
+    }
+
+    li {
+      position: relative;
+
+      &:first-child {
+        margin-top: 4.3rem;
+      }
+
+      &:last-child {
+        margin-bottom: 4.3rem;
+      }
+    }
+
+    a {
+      display: block;
+      font-weight: 600;
+    }
+  }
+}
+
+.navigation a:not(.contact-btn) {
+  color: $dark-grayish-blue;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.014rem;
+
+  background: linear-gradient(to bottom, $btnHover 0%, $btnHover 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+  text-decoration: none;
+  transition: background-size 200ms;
+
+  &:hover {
+    background-size: 4px 50px;
+    color: $white;
+  }
+}

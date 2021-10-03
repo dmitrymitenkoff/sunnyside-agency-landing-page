@@ -1,0 +1,45 @@
+@use '../abstracts/variables' as *;
+
+nav {
+  button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:focus {
+      outline-style: solid;
+      outline-color: transparent;
+    }
+
+    @media screen and (-ms-high-contrast: active) {
+      border: 2px solid currentcolor;
+    }
+
+    .line {
+      width: 2.5rem;
+      height: 0.2rem;
+      margin-bottom: 0.6rem;
+      background-color: $white;
+      border-radius: 2rem;
+      border: none;
+      transition: all 300ms;
+
+      &:first-child.active {
+        transform: translate(0, 14px) rotate(45deg);
+      }
+
+      &:nth-child(2).active {
+        background-color: transparent;
+        transform: translateX(-55px);
+      }
+
+      &:nth-child(3).active {
+        transform: translate(0, -2px) rotate(-45deg);
+      }
+    }
+  }
+}

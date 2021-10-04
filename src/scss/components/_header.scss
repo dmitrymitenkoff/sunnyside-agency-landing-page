@@ -6,7 +6,7 @@
   background-image: url('/assets/mobile/image-header.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 -8rem;
+  background-position: 0 0;
 
   &__inner {
     display: flex;
@@ -19,7 +19,7 @@
   h1 {
     font-family: $font-Fraunces;
     font-weight: 900;
-    font-size: 4rem;
+    font-size: 3.9rem;
     line-height: 4.932rem;
     letter-spacing: 0.625rem;
     text-align: center;

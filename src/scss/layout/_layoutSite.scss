@@ -6,7 +6,6 @@ h2 {
   font-size: 3.2rem;
   line-height: 3.946rem;
   letter-spacing: -0.023rem;
-  text-align: center;
   margin-bottom: 2.5rem;
 }
 
@@ -14,7 +13,6 @@ p {
   font-weight: 600;
   line-height: 3rem;
   letter-spacing: -0.013rem;
-  text-align: center;
   color: $dark-grayish-blue;
   margin-bottom: 3.2rem;
 }
@@ -24,7 +22,7 @@ p {
   width: clamp(32.7rem, 90vw, 135.2rem);
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 6.4rem;
+
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 3.2rem;
@@ -34,14 +32,19 @@ p {
   margin-top: 6.4rem;
   padding-left: 3rem;
   padding-right: 3rem;
+  text-align: center;
+}
+
+.transform-message,
+.standout-message {
+  margin-bottom: 6.4rem;
 }
 
 #main-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax($minColWidth, 1fr));
 }
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18.8rem, 1fr));
+  grid-template-columns: repeat(2, 1fr);
 }

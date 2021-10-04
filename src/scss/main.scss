@@ -4,11 +4,14 @@
 @use './base/global';
 @use './base/reset';
 
+@use './components/cardOverlay';
 @use './components/contactBtn';
 @use './components/hamburger';
 @use './components/main-navigation';
 @use './components/footer';
 @use './components/header';
+@use './components/site';
+@use './components/testimonials';
 
 @use './layout/layoutFooter';
 @use './layout/layoutHeader';

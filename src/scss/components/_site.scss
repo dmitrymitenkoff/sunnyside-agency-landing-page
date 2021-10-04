@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as *;
+
+// LINKS
+article a {
+  font-family: $font-Fraunces;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 1px;
+  color: $very-dark-blue;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0 0.5rem;
+}
+
+.transform a::after {
+  content: '';
+  position: absolute;
+  border-top: 1rem solid $btnColor;
+  border-radius: 2rem;
+  opacity: 0.2;
+  top: 1rem;
+  right: 0;
+  bottom: 0rem;
+  left: 0;
+}
+
+.standout a::after {
+  content: '';
+  position: absolute;
+  border-top: 1rem solid $soft-red;
+  border-radius: 2rem;
+  opacity: 0.2;
+  top: 1rem;
+  right: 0;
+  bottom: 0rem;
+  left: 0;
+}

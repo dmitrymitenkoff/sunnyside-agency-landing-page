@@ -1,0 +1,112 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+body {
+  line-height: 1.5;
+  overflow-x: hidden;
+  font-family: $fontbase;
+  color: $color-primary-dark;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  max-width: 22ch;
+  font-size: clamp(2.5rem, 2.07rem + 3vw, 3.5rem);
+}
+
+h2 {
+  max-width: 18ch;
+  font-size: clamp(2rem, 1.47rem + 3vw, 2.5rem);
+}
+
+h3 {
+  max-width: 18ch;
+  font-size: clamp(1rem, 0.5rem + 3vw, 1.5rem);
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+:focus {
+  outline: 2px dotted;
+  outline-offset: 0.25rem;
+}
+
+.skip-link {
+  display: inline-block;
+  padding: 0.7rem 1rem 0.5rem 1rem;
+  background: $color-primary-light;
+  color: $color-primary-dark;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.skip-link:hover {
+  background: var(--color-dark);
+  color: var(--color-light-shade);
+}
+
+.skip-link:not(:focus) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+  background-color: $color-primary-light;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: $color-primary-dark;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar */
+}

@@ -1,0 +1,46 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+
+// .btn-toggle {
+//   display: none;
+// }
+
+.btn-toggle {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  width: 2.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:focus {
+    outline-style: solid;
+    outline-color: transparent;
+  }
+
+  // @include ms-high-contrast;
+
+  .line {
+    width: 2.5rem;
+    height: 0.2rem;
+    margin-bottom: 0.6rem;
+    background-color: $color-primary-light;
+    border-radius: 2rem;
+    border: none;
+    transition: all 300ms;
+
+    &:first-child.active {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+
+    &:nth-child(2).active {
+      background-color: transparent;
+      transform: translateX(-55px);
+    }
+
+    &:nth-child(3).active {
+      transform: translate(0, -14px) rotate(45deg);
+    }
+  }
+}

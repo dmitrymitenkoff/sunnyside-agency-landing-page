@@ -12,46 +12,40 @@
 </head>
 <body>
   <header class="site-head" role="banner">
-    <div class="wrapper">
-      <div class="site-head__inner">
 
-        <a href="#main-content" class="skip-link">Skip to content</a>
+    <a href="#main-content" class="skip-link">Skip to content</a>
 
-        <a href="/" aria-label="Sunnyside home" class="site-head__brand">
-          <img src="/assets/logo.svg" alt="Sunnyside logo">
-        </a> 
+    <nav class="navigation" aria-label="primary">
 
-        <nav class="navigation" aria-label="primary">
+      <a href="/" aria-label="Sunnyside home" class="site-head-brand">
+        <img src="/assets/logo.svg" alt="Sunnyside logo">
+      </a> 
+      
+      <button class="btn-toggle">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <span class="screen-reader-text">Main menu</span>
+      </button>
 
-          <button class="btn-toggle">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <span class="sr-only">Main menu</span>
-          </button><!-- button ends here -->
-
-        
-          <ul role="list">
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Services</a>
-            </li>
-            <li>
-              <a href="#">Projects</a>
-            </li>
-            <li>
-              <a class="contact-btn" href="#">Contact</a>
-            </li>
-          </ul>
-        </nav> <!-- Head Navigation ends here -->
-      </div>
-
+      <ul class="menu-list" role="list">
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Services</a>
+        </li>
+        <li>
+          <a href="#">Projects</a>
+        </li>
+        <li>
+          <a class="contact-btn" href="#">Contact</a>
+        </li>
+      </ul>
+    </nav> 
 
     <h1>We are creatives</h1>
     <img class="arrow" src="./assets/icon-arrow-down.svg" alt="Icon - arrow pointing down">
-</div> <!-- Wrapper ends here -->
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -64,7 +58,7 @@
             <img src="./assets/desktop/image-transform.jpg" alt="">
           </picture>
         </div>
-        <div class="transform-message wrapper">
+        <div class="promo-text wrapper">
           <h2>Transform your brand</h2>
           <p>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
           <a href="#">Learn more</a>
@@ -79,7 +73,7 @@
             <img src="./assets/desktop/image-stand-out.jpg" alt="">
           </picture>
         </div>
-        <div class="standout-message wrapper">
+        <div class="promo-text wrapper">
           <h2>Stand out to the right audience</h2>
           <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
           <a href="#">Learn more</a>
@@ -96,7 +90,7 @@
             <img src="./assets/desktop/image-graphic-design.jpg" alt="">
           </picture>
         </div>
-        <div class="graphic-design-message wrapper card__content">
+        <div class="graphic-design-message card__content">
           <h2>Graphic Design</h2>
           <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
         </div>
@@ -110,17 +104,17 @@
             <img src="./assets/desktop/image-photography.jpg" alt="">
           </picture>
         </div>
-        <div class="photography-message wrapper card__content">
+        <div class="photography-message card__content">
           <h2>Photography</h2>
           <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
         </div>
       </div>
     </article> <!-- "Services" ends here -->
 
-    <article class="testimonials wrapper">
+    <article class="testimonials">
       <h3>Client Testimonials</h3>
 
-      <figure class="testimonials-card">
+      <figure class="testimonials-card wrapper">
         <blockquote>
           <img src="./assets/image-emily.jpg" alt="An image of Emily">
           <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
@@ -131,7 +125,7 @@
         </figcaption>
       </figure>
 
-      <figure class="testimonials-card">
+      <figure class="testimonials-card wrapper">
         <blockquote>
           <img src="./assets/image-thomas.jpg" alt="An image of Thomas">
           <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
@@ -142,7 +136,7 @@
         </figcaption>
       </figure>
 
-      <figure class="testimonials-card">
+      <figure class="testimonials-card wrapper">
         <blockquote>
           <img src="./assets/image-jennie.jpg" alt="An image of Jennie">
           <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
@@ -187,7 +181,7 @@
   </main>
 
   <footer class="site-foot" role="contentinfo">
-    <div class="wrapper">
+    <div>
       
       <a href="/" aria-label="Sunnyside home" class="site-foot-brand">
         <svg width="170px" height="33px" xmlns="http://www.w3.org/2000/svg">
@@ -207,7 +201,7 @@
             <a href="#">Projects</a>
           </li>
         </ul>
-      </nav> <!-- Footer navigation ends here -->
+      </nav> 
 
       <ul class="social-links" role="list">
         <li>

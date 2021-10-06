@@ -1,0 +1,30 @@
+// Primary Colours
+$color-primary-dark: hsla(211, 26%, 19%, 1);
+$color-primary-light: hsla(0, 0%, 100%, 1);
+$color-secondary-dark: hsla(233, 10%, 55%, 1);
+$color-tertiary-dark: hsla(166, 40%, 24%, 1);
+$color-red: hsla(7, 99%, 70%, 1);
+$color-yellow: hsla(51, 100%, 49%, 1);
+
+// Auxiliary Colours
+$color-link-underline-red: $color-red;
+$color-link-underline-yellow: $color-yellow;
+$button-hover-background: $color-yellow;
+
+// Testimonials Colours
+$color-testimonials-heading: hsla(210, 4%, 67%, 1);
+$color-testimonials-text: hsla(213, 9%, 39%, 1);
+$color-testimonials-bold: $color-primary-dark;
+
+// Footer Colours
+$color-footer-background: hsla(168, 44%, 70%, 1);
+$color-footer-logo: hsla(168, 46%, 31%, 1);
+$color-footer-text: hsla(167, 34%, 41%, 1);
+
+// Fonts
+$barlow: 'Barlow';
+$fraunces: 'Fraunces';
+$fontbase: $barlow, sans-serif;
+
+// Margins
+$margin-bottom: 4rem;

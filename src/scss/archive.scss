@@ -1,0 +1,303 @@
+// @use './abstracts/mixins';
+// @use './abstracts/variables';
+// @use './base/global';
+// @use './base/reset';
+// @use './components/cardOverlay';
+// @use './components/contactBtn';
+// @use './components/hamburger';
+// @use './components/main-navigation';
+// @use './components/footer';
+// @use './components/header';
+// @use './components/site';
+// @use './components/testimonials';
+// @use './layout/layoutFooter';
+// @use './layout/layoutHeader';
+// @use './layout/layoutNavigation';
+// @use './layout/layoutSite';
+
+//
+// VARIABLES
+//
+// $soft-red: hsl(7, 99%, 70%);
+// $dark-desaturated-cyan: hsl(166, 40%, 24%);
+// $dark-blue: hsl(198, 62%, 26%);
+// $dark-moderate-cyan: hsl(168, 34%, 41%);
+// $footer-bg: hsla(168, 44%, 70%, 1);
+// $very-dark-blue: hsl(212, 27%, 19%);
+// $very-dark-grayish-blue: hsl(213, 9%, 39%);
+// $dark-grayish-blue: hsl(233, 10%, 55%);
+// $grayish-blue: hsl(210, 4%, 67%);
+// $white: hsl(0, 0%, 100%);
+// $btnColor: hsl(51, 100%, 49%);
+// $btnHover: hsl(200, 100%, 62%);
+// $services-blue: hsla(197, 86%, 12%);
+// $footer-logo: hsla(168, 46%, 31%, 1);
+// $font-Barlow: 'Barlow', sans-serif;
+// $font-Fraunces: 'Fraunces', serif;
+// $default-font-size: 1.8rem;
+// $minColWidth: 37.5rem;
+// Sets :focus styles globally by modifying how the outline looks. This means that any element that can receive focus, such as <a> and <button> will have a consistent focus style. The outline-offset pulls the outline away from the content a bit.
+// :focus {
+//   outline: 1px dotted currentColor;
+//   outline-offset: 0.2rem;
+// }
+
+//
+// CARD OVERLAY
+//
+
+// .card {
+//   display: grid;
+
+//   h2 {
+//     font-size: 2.8rem;
+//     letter-spacing: -0.2px;
+//     opacity: 0.75;
+//   }
+
+//   p {
+//     font-size: 1.6rem;
+//     line-height: 2.7rem;
+//     margin-bottom: 5.9rem;
+//     opacity: 0.75;
+//   }
+
+//   &__content {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-end;
+//   }
+
+//   img {
+//     object-fit: cover;
+//     min-height: 60rem;
+//   }
+
+//   &__thumb,
+//   &__content {
+//     grid-area: 1/-1;
+//   }
+// }
+
+// .graphic-design-message {
+//   h2 {
+//     color: $dark-desaturated-cyan;
+//   }
+//   p {
+//     color: $dark-desaturated-cyan;
+//   }
+// }
+
+// .photography-message {
+//   h2 {
+//     color: $services-blue;
+//   }
+//   p {
+//     color: $services-blue;
+//   }
+// }
+
+//
+// CONTACT BUTTON
+//
+// .navigation {
+//   a {
+//     text-decoration: none;
+//   }
+
+//   .contact-btn {
+//     display: inline-flex;
+//     align-items: center;
+//     justify-content: center;
+//     background-color: $btnColor;
+//     color: $very-dark-blue;
+//     border-radius: 2.8rem;
+//     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+//     padding: 0.25em 0.75em;
+//     min-width: 10ch;
+//     min-height: 4.4rem;
+//     width: 14rem;
+//     height: 5.6rem;
+//     text-transform: uppercase;
+//     text-align: center;
+//     font-family: $font-Fraunces;
+//     font-weight: 700;
+//     font-size: 1.5rem;
+//     line-height: 2.5rem;
+//     letter-spacing: -0.011rem;
+//     transition: 220ms all ease-in-out;
+
+//     &:hover,
+//     &:active {
+//       background-color: #3ebfff;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       outline-style: solid;
+//       outline-color: transparent;
+//       box-shadow: 0 0 0 2px darken($btnHover, 20%);
+//     }
+//   }
+// }
+
+//
+// HAMBURGER
+//
+
+// nav {
+//   button {
+//     border: 0;
+//     background: transparent;
+//     cursor: pointer;
+//     width: 2.6rem;
+//     overflow: hidden;
+
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     &:focus {
+//       outline-style: solid;
+//       outline-color: transparent;
+//     }
+
+//     @media screen and (-ms-high-contrast: active) {
+//       border: 2px solid currentcolor;
+//     }
+
+//     .line {
+//       width: 2.5rem;
+//       height: 0.2rem;
+//       margin-bottom: 0.6rem;
+//       background-color: $white;
+//       border-radius: 2rem;
+//       border: none;
+//       transition: all 300ms;
+
+//       &:first-child.active {
+//         transform: translate(0, 10px) rotate(-45deg);
+//       }
+
+//       &:nth-child(2).active {
+//         background-color: transparent;
+//         transform: translateX(-55px);
+//       }
+
+//       &:nth-child(3).active {
+//         transform: translate(0, -6px) rotate(45deg);
+//       }
+//     }
+//   }
+// }
+
+//
+// HEADER
+//
+// .site-head {
+//   height: 53rem;
+//   position: relative;
+//   background-image: url('/assets/mobile/image-header.jpg');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: 0 0;
+
+//   &__inner {
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-content: center;
+//     justify-content: space-between;
+//     margin-bottom: 8rem;
+//   }
+
+//   h1 {
+//     font-family: $font-Fraunces;
+//     font-weight: 900;
+//     font-size: 3.9rem;
+//     line-height: 4.932rem;
+//     letter-spacing: 0.625rem;
+//     text-align: center;
+//     text-transform: uppercase;
+//     color: $white;
+//     margin-bottom: 5.2rem;
+//   }
+
+//   .arrow {
+//     margin: 0 auto;
+//   }
+// }
+
+//
+// NAVIGATION
+//
+// .navigation {
+//   position: relative;
+//   width: fit-content;
+
+//   ul {
+//     position: absolute;
+//     top: 8rem;
+//     right: 0;
+//     width: 30rem;
+
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     gap: 3.2rem;
+//     margin: 0;
+//     padding: 0;
+//     z-index: 1;
+//     background: $white;
+
+//     &.hide {
+//       display: none;
+//     }
+
+//     &::before {
+//       position: absolute;
+//       right: 0;
+//       top: -2.4rem;
+//       content: '';
+//       width: 2.4rem;
+//       height: 2.4rem;
+//       background: $white;
+//       clip-path: polygon(100% 1%, 0% 100%, 100% 100%);
+//     }
+
+//     li {
+//       position: relative;
+
+//       &:first-child {
+//         margin-top: 4.3rem;
+//       }
+
+//       &:last-child {
+//         margin-bottom: 4.3rem;
+//       }
+//     }
+
+//     a {
+//       display: block;
+//       font-weight: 600;
+//     }
+//   }
+// }
+
+// .navigation a:not(.contact-btn) {
+//   color: $dark-grayish-blue;
+//   font-size: 2rem;
+//   line-height: 2.5rem;
+//   letter-spacing: -0.014rem;
+
+//   background: linear-gradient(to bottom, $btnHover 0%, $btnHover 100%);
+//   background-position: 0 100%;
+//   background-repeat: repeat-x;
+//   background-size: 1px 1px;
+//   text-decoration: none;
+//   transition: background-size 200ms;
+
+//   &:hover {
+//     background-size: 4px 50px;
+//     color: $white;
+//   }
+// }

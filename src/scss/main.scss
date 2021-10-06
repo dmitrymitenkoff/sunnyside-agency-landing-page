@@ -1,19 +1,5 @@
-@use './abstracts/mixins';
-@use './abstracts/variables';
-
-@use './base/global';
-@use './base/reset';
-
-@use './components/cardOverlay';
-@use './components/contactBtn';
-@use './components/hamburger';
-@use './components/main-navigation';
-@use './components/footer';
-@use './components/header';
-@use './components/site';
-@use './components/testimonials';
-
-@use './layout/layoutFooter';
-@use './layout/layoutHeader';
-@use './layout/layoutNavigation';
-@use './layout/layoutSite';
+@use './utilities/reset';
+@use './blocks/global';
+@use './blocks/hamburger';
+@use './blocks/header';
+@use './blocks/page';

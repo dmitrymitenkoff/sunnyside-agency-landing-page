@@ -1,0 +1,14 @@
+@use '../utilities/mixins' as *;
+
+.promo-text {
+  @include wrapper;
+  text-align: center;
+
+  h2 {
+    @include margin-sm;
+  }
+
+  p {
+    @include margin-bg;
+  }
+}

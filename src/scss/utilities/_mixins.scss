@@ -1,0 +1,35 @@
+@mixin wrapper {
+  max-width: 28rem;
+  width: clamp(10rem, 80%, 28rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: clamp(4rem, 25%, 9.9rem);
+  padding-right: clamp(1.5rem, 1.4rem + 0.4vw, 10.3rem);
+  padding-bottom: clamp(4rem, 25%, 9.9rem);
+  padding-left: clamp(1.5rem, 1.4rem + 0.4vw, 10.3rem);
+}
+
+@mixin margin-sm {
+  margin-bottom: clamp(1.5rem, 10%, 2.1rem);
+}
+
+@mixin margin-bg {
+  margin-bottom: clamp(2rem, 20%, 2.5rem);
+}
+
+@mixin absolutePosition {
+  position: absolute;
+  top: 2rem;
+}
+
+// @mixin responsiveNavigation {
+//   @media (min-width: 17em) and (max-width: 30em) {
+//     @content;
+//   }
+// }
+
+@mixin ms-high-contrast {
+  @media screen and (-ms-high-contrast: active) {
+    border: 2px solid currentcolor;
+  }
+}

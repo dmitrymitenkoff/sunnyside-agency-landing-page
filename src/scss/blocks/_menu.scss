@@ -16,6 +16,10 @@
   align-items: center;
   z-index: 10;
 
+  @include responsive(medium) {
+    position: relative;
+  }
+
   li:not(:last-child) a {
     display: block;
     outline: none;

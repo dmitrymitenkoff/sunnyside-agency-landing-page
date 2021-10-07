@@ -37,9 +37,13 @@
     font-family: $fraunces;
     font-weight: 900;
     font-size: clamp(2.5rem, 2.07rem + 3vw, 3.5rem);
-    max-width: 22ch;
     color: $color-primary-light;
     text-transform: uppercase;
+
+    @include responsive(medium) {
+      padding-left: clamp(1.4rem, 1.6rem + 1vw, 2.8rem);
+      padding-right: clamp(1.4rem, 1.6rem + 1vw, 2.8rem);
+    }
   }
 
   .arrow {

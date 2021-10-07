@@ -9,7 +9,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
     @include wrapper;
     padding-bottom: clamp(3rem, 3rem + 2vh, 3.7rem);
   }

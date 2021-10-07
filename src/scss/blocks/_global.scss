@@ -5,6 +5,7 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   font-family: $fontbase;
+  height: 100%;
 }
 
 h1,
@@ -31,10 +32,6 @@ h3 {
 a {
   color: currentColor;
   text-decoration: none;
-}
-
-#main-content {
-  min-height: calc(100vh - 44rem);
 }
 
 :focus {

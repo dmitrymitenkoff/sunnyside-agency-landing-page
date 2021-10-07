@@ -13,12 +13,12 @@
     color: $color-testimonials-heading;
     margin-left: auto;
     margin-right: auto;
-    @include flow-md;
+    @include flow-bg;
   }
 
   &-card {
     @include wrapper;
-    @include flow-md;
+    @include flow-bg;
 
     & blockquote,
     & figcaption {
@@ -33,12 +33,12 @@
       width: 4.5rem;
       height: 4.5rem;
       border-radius: 50%;
-      @include margin-sm;
+      @include flow-minimum;
     }
 
     & p {
-      @include margin-sm;
       color: $color-testimonials-text;
+      @include flow-minimum;
     }
   }
 

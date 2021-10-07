@@ -5,7 +5,6 @@
 .site-head {
   height: clamp(33rem, 60vh, 50rem);
   background-image: url('/assets/mobile/image-header.jpg');
-  background-color: tomato;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -27,9 +26,9 @@
     margin-left: clamp(1.4rem, 1.6rem + 1vw, 2.8rem);
     padding-top: clamp(2rem, 2rem + 0.4vh, 2.1rem);
 
-    // .site-head-brand {
-    //   flex-basis: 40%;
-    // }
+    .site-head-brand {
+      flex-basis: 40%;
+    }
   }
 
   // HEADING
@@ -48,71 +47,3 @@
     margin-right: auto;
   }
 }
-
-.menu-list {
-  // Position menu absolutely on smaller screens
-  position: absolute;
-  top: 8rem;
-  left: 0;
-  padding-top: 2.4rem;
-  padding-bottom: 2.4rem;
-  width: 100%;
-  background-color: $color-primary-light;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-
-  &.hide {
-    border: 4px solid tomato;
-    display: none;
-  }
-
-  & li:not(:last-of-type) {
-    margin-bottom: 2rem;
-    font-weight: 600;
-    font-size: clamp(1.2rem, 1.1rem + 0.4vw, 1.3rem);
-    line-height: 1.25;
-    letter-spacing: -0.14px;
-    color: $color-secondary-dark;
-  }
-
-  & li:last-of-type {
-    background-color: $color-yellow;
-    color: $color-primary-dark;
-  }
-
-  // Pseudo element
-  // &::before {
-  //   position: absolute;
-  //   right: 0;
-  //   top: -2.4rem;
-  //   content: '';
-  //   width: 2.4rem;
-  //   height: 2.4rem;
-  //   background: $color-primary-light;
-  //   clip-path: polygon(100% 1%, 0% 100%, 100% 100%);
-  // }
-}
-
-// Menu styles for bigger screens
-// position: relative;
-// background-color: transparent;
-// display: flex;
-// gap: 0 clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
-// padding: 1rem 0;
-// color: $color-primary-light;
-// align-items: center;
-// justify-content: flex-end;
-
-// & li:last-of-type {
-//   background-color: rgba(255, 255, 255, 0.25);
-//   font-family: $fraunces;
-//   font-size: 0.9rem;
-//   line-height: 1.7;
-//   letter-spacing: -0.11px;
-//   text-transform: uppercase;
-//   padding: 1rem 2rem;
-//   border-radius: 1.75rem;
-// }

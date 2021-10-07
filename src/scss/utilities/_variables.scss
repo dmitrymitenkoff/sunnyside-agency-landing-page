@@ -3,12 +3,16 @@ $color-primary-dark: hsla(211, 26%, 19%, 1);
 $color-primary-light: hsla(0, 0%, 100%, 1);
 $color-secondary-dark: hsla(233, 10%, 55%, 1);
 $color-tertiary-dark: hsla(166, 40%, 24%, 1);
+$color-tertiary-semidark: hsla(197, 86%, 12%, 0.75);
+
 $color-red: hsla(7, 99%, 70%, 1);
 $color-yellow: hsla(51, 100%, 49%, 1);
 
 // Auxiliary Colours
-$color-link-underline-red: $color-red;
-$color-link-underline-yellow: $color-yellow;
+$color-link-underline-red: hsla(7, 99%, 70%, 0.25);
+$color-link-underline-red-hover: $color-red;
+$color-link-underline-yellow: hsla(51, 100%, 49%, 0.25);
+$color-link-underline-yellow-hover: $color-yellow;
 $button-hover-background: $color-yellow;
 
 // Testimonials Colours
@@ -25,6 +29,3 @@ $color-footer-text: hsla(167, 34%, 41%, 1);
 $barlow: 'Barlow';
 $fraunces: 'Fraunces';
 $fontbase: $barlow, sans-serif;
-
-// Margins
-$margin-bottom: 4rem;

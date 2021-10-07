@@ -1,0 +1,60 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+
+.testimonials {
+  margin-top: clamp(3rem, 4rem + 2vh, 10rem);
+
+  h3 {
+    font-family: $fraunces;
+    font-weight: 900;
+    font-size: 1rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: $color-testimonials-heading;
+    margin-left: auto;
+    margin-right: auto;
+    @include flow-md;
+  }
+
+  &-card {
+    @include wrapper;
+    @include flow-md;
+
+    & blockquote,
+    & figcaption {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    & img {
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 50%;
+      @include margin-sm;
+    }
+
+    & p {
+      @include margin-sm;
+      color: $color-testimonials-text;
+    }
+  }
+
+  &-name {
+    font-family: $fraunces;
+    font-weight: 900;
+    font-size: 1.1rem;
+    letter-spacing: -0.13px;
+    margin-bottom: 0.6rem;
+  }
+
+  &-job-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    letter-spacing: -0.1px;
+    color: $color-testimonials-heading;
+  }
+}

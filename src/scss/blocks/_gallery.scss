@@ -1,0 +1,11 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+
+  &-card {
+    flex: 1 0 50%;
+  }
+}

@@ -13,13 +13,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-right: 0;
 
   &:focus {
     outline-style: solid;
     outline-color: transparent;
   }
 
-  // @include ms-high-contrast;
+  @include ms-high-contrast;
 
   .line {
     width: 2.5rem;

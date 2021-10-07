@@ -1,0 +1,46 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+
+.card {
+  display: grid;
+  text-align: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include wrapper;
+    padding-bottom: clamp(3rem, 3rem + 2vh, 3.7rem);
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: clamp(35rem, 35rem + 2vh, 37.5rem);
+  }
+
+  &__thumb,
+  &__content {
+    grid-area: 1/-1;
+  }
+
+  &__content {
+    h2 {
+      font-size: 1.75rem;
+      letter-spacing: -0.2px;
+      font-family: $fraunces;
+      font-weight: 900;
+      margin-bottom: 1.7rem;
+    }
+  }
+}
+
+.graphic-design-message p,
+.graphic-design-message h2 {
+  color: $color-tertiary-dark;
+}
+
+.photography-message h2 {
+  color: $color-tertiary-semidark;
+}

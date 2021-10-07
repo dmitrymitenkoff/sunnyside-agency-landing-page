@@ -5,7 +5,6 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   font-family: $fontbase;
-  color: $color-primary-dark;
 }
 
 h1,
@@ -25,13 +24,17 @@ h2 {
 }
 
 h3 {
-  max-width: 18ch;
+  max-width: 25ch;
   font-size: clamp(1rem, 0.5rem + 3vw, 1.5rem);
 }
 
 a {
   color: currentColor;
   text-decoration: none;
+}
+
+#main-content {
+  min-height: calc(100vh - 44rem);
 }
 
 :focus {
@@ -53,8 +56,8 @@ a {
 }
 
 .skip-link:hover {
-  background: var(--color-dark);
-  color: var(--color-light-shade);
+  background: $color-primary-dark;
+  color: $color-primary-light;
 }
 
 .skip-link:not(:focus) {

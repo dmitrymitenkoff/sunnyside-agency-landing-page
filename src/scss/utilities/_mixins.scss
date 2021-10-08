@@ -41,7 +41,13 @@
 // Media queries
 @mixin responsive($breakpoint) {
   @if $breakpoint == medium {
-    @media (min-width: 30em) {
+    @media (min-width: 481px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media (min-width: 768px) {
       @content;
     }
   }

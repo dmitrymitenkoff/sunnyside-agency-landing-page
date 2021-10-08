@@ -18,6 +18,17 @@
 
   @include responsive(medium) {
     position: relative;
+    top: 0;
+    padding-top: 1.4rem;
+    padding-bottom: 2.4rem;
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  @include responsive(tablet) {
+    flex-basis: 45%;
   }
 
   li:not(:last-child) a {
@@ -27,12 +38,21 @@
     line-height: 1.25;
     letter-spacing: -0.14px;
     padding: 4px 8px;
-    border-bottom: 2px solid transparent;
+    border: 2px dotted transparent;
     position: relative;
     transition: 220ms all ease-in-out;
 
+    @include responsive(medium) {
+      padding-left: 0;
+      padding-right: 0;
+      color: $color-primary-light;
+    }
+
     &:focus {
       border: 2px dotted $color-red;
+      @include responsive(medium) {
+        border: 2px dotted $color-primary-light;
+      }
     }
 
     &:after {
@@ -46,6 +66,10 @@
       transform: scaleX(0);
       transform-origin: bottom right;
       transition: transform 300ms;
+
+      @include responsive(medium) {
+        background-color: $color-primary-dark;
+      }
     }
 
     &:hover:after {
@@ -65,8 +89,16 @@
     border-radius: 1.8rem;
     transition: 220ms all ease-in-out;
 
+    @include responsive(medium) {
+      background-color: hsla(0, 0%, 100%, 0.25);
+      color: $color-primary-light;
+    }
+
     &:hover {
       background-color: $color-link-underline-yellow;
+      @include responsive(medium) {
+        background-color: hsla(0, 0%, 100%, 0.15);
+      }
     }
   }
 
@@ -78,6 +110,10 @@
     margin-bottom: 2rem;
     font-weight: 600;
     font-size: clamp(1.2rem, 1.1rem + 0.4vw, 1.3rem);
+
+    @include responsive(medium) {
+      margin-bottom: 0;
+    }
   }
 
   // Pseudo element
@@ -90,6 +126,10 @@
     height: 2.4rem;
     background: $color-primary-light;
     clip-path: polygon(100% 1%, 0% 100%, 100% 100%);
+
+    @include responsive(medium) {
+      display: none;
+    }
   }
 }
 

@@ -3,6 +3,14 @@
 
 .testimonials {
   margin-top: clamp(3rem, 4rem + 2vh, 10rem);
+  @include responsive(tablet) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: auto;
+    max-width: 90rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   h3 {
     font-family: $fraunces;
@@ -14,6 +22,29 @@
     margin-left: auto;
     margin-right: auto;
     @include flow-bg;
+    @include responsive(tablet) {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+  }
+
+  figure:first-of-type {
+    @include responsive(tablet) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+  }
+  figure:nth-of-type(2) {
+    @include responsive(tablet) {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+  }
+  figure:last-of-type {
+    @include responsive(tablet) {
+      grid-column: 3/4;
+      grid-row: 2/3;
+    }
   }
 
   &-card {
@@ -39,6 +70,10 @@
     & p {
       color: $color-testimonials-text;
       @include flow-minimum;
+      @include responsive(tablet) {
+        padding-left: 1em;
+        padding-right: 1em;
+      }
     }
   }
 

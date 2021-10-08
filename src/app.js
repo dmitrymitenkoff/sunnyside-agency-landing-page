@@ -7,7 +7,7 @@ const lines = document.querySelectorAll('.line');
 button.setAttribute('aria-expanded', 'false');
 button.setAttribute('aria-label', 'Open the menu');
 
-const mediaQuery = window.matchMedia('(max-width: 30em)');
+const mediaQuery = window.matchMedia('(max-width: 480px)');
 
 function handleMedia(e) {
   if (e.matches) {

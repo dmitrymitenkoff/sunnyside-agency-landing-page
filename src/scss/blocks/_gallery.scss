@@ -5,7 +5,14 @@
   display: flex;
   flex-flow: row wrap;
 
+  @include responsive(tablet) {
+    flex-flow: row nowrap;
+  }
+
   &-card {
     flex: 1 0 50%;
+    @include responsive(tablet) {
+      flex: 1 0 25%;
+    }
   }
 }

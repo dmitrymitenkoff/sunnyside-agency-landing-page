@@ -10,10 +10,10 @@
   background-position: center;
   text-align: center;
 
-  // Swap the background img on wider viewports
-  // @include responsiveNavigation {
-  //   background-image: url('/assets/desktop/image-header.jpg');
-  // }
+  @include responsive(tablet) {
+    background-image: url('/assets/desktop/image-header.jpg');
+    height: 50rem;
+  }
 
   .navigation {
     position: relative;
@@ -28,6 +28,12 @@
 
     .site-head-brand {
       flex-basis: 40%;
+
+      @include responsive(tablet) {
+        transform: scale(1.4);
+        margin-left: 3rem;
+        flex-basis: 15%;
+      }
     }
   }
 
@@ -39,10 +45,13 @@
     font-size: clamp(2.5rem, 2.07rem + 3vw, 3.5rem);
     color: $color-primary-light;
     text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
-    @include responsive(medium) {
-      padding-left: clamp(1.4rem, 1.6rem + 1vw, 2.8rem);
-      padding-right: clamp(1.4rem, 1.6rem + 1vw, 2.8rem);
+    @include responsive(tablet) {
+      letter-spacing: 8.75px;
     }
   }
 

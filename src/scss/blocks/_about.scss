@@ -106,38 +106,3 @@
     }
   }
 }
-
-.services {
-  @include responsive(tablet) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    // align-content: stretch;
-  }
-
-  .graphic-design {
-    @include responsive(tablet) {
-      grid-column: 1/2;
-      grid-row: 1/2;
-    }
-
-    img {
-      @include responsive(tablet) {
-        @include stretchAndFit;
-      }
-    }
-  }
-
-  .photography {
-    @include responsive(tablet) {
-      grid-column: 2/3;
-      grid-row: 1/2;
-    }
-
-    img {
-      @include responsive(tablet) {
-        @include stretchAndFit;
-      }
-    }
-  }
-}

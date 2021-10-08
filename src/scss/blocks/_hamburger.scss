@@ -58,31 +58,4 @@
   .ham.active .bottom {
     stroke-dashoffset: -138px;
   }
-
-  // .line {
-  //   width: 2.5rem;
-  //   height: 0.2rem;
-  //   margin-bottom: 0.6rem;
-  //   background-color: $color-primary-light;
-  //   border-radius: 2rem;
-  //   border: none;
-  //   transition: all 300ms;
-
-  //   @include responsive(medium) {
-  //     display: none;
-  //   }
-
-  //   &:first-child.active {
-  //     transform: translate(0, 11px) rotate(-45deg);
-  //   }
-
-  //   &:nth-child(2).active {
-  //     background-color: transparent;
-  //     transform: translateX(-55px);
-  //   }
-
-  //   &:nth-child(3).active {
-  //     transform: translate(0, -14px) rotate(45deg);
-  //   }
-  // }
 }

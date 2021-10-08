@@ -28,7 +28,7 @@
   }
 
   @include responsive(tablet) {
-    flex-basis: 45%;
+    flex-basis: 50%;
   }
 
   li:not(:last-child) a {
@@ -66,10 +66,6 @@
       transform: scaleX(0);
       transform-origin: bottom right;
       transition: transform 300ms;
-
-      @include responsive(medium) {
-        background-color: $color-primary-dark;
-      }
     }
 
     &:hover:after {

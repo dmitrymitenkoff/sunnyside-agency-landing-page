@@ -4,9 +4,9 @@
 // Mobile menu
 .menu-list {
   position: absolute;
-  padding-top: 2.4rem;
-  padding-bottom: 2.4rem;
-  top: 8rem;
+  padding-top: 3rem;
+  padding-bottom: 3.4rem;
+  top: 9rem;
   left: 0;
   width: 100%;
   background-color: $color-primary-light;
@@ -128,24 +128,3 @@
     }
   }
 }
-
-// Menu styles for bigger screens
-// position: relative;
-// background-color: transparent;
-// display: flex;
-// gap: 0 clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
-// padding: 1rem 0;
-// color: $color-primary-light;
-// align-items: center;
-// justify-content: flex-end;
-
-// & li:last-of-type {
-//   background-color: rgba(255, 255, 255, 0.25);
-//   font-family: $fraunces;
-//   font-size: 0.9rem;
-//   line-height: 1.7;
-//   letter-spacing: -0.11px;
-//   text-transform: uppercase;
-//   padding: 1rem 2rem;
-//   border-radius: 1.75rem;
-// }

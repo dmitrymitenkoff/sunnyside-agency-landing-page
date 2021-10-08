@@ -3,6 +3,12 @@ const button = document.querySelector('.btn-toggle');
 const menu = document.querySelector('.menu-list');
 const lines = document.querySelectorAll('.line');
 
+const hamburger = document.querySelector('.ham');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+});
+
 // Set initial state for the button
 button.setAttribute('aria-expanded', 'false');
 button.setAttribute('aria-label', 'Open the menu');
